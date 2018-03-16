@@ -1,0 +1,62 @@
+#gridPane {
+    -fx-background-image: url("/icons/matrix.png");
+}
+
+#signUpLabel {
+    -fx-font-size: 30px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+}
+
+#errorLabel {
+    -fx-font-size: 20px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+}
+
+#username {
+    -fx-max-width: 260px;
+    -fx-pref-height: 50px;
+
+    -fx-font-family: "Arial";
+    -fx-font-size: 25px;
+
+    -fx-background-radius: 0px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+}
+
+#password {
+    -fx-max-width: 260px;
+    -fx-pref-height: 50px;
+
+    -fx-font-family: "Arial";
+    -fx-font-size: 25px;
+
+    -fx-background-radius: 0px;
+}
+
+#signup {
+    -fx-background-color: #4fe6ba;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 0;
+
+    -fx-pref-width: 128px;
+    -fx-pref-height: 40px;
+
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+#signup:hover {
+    -fx-background-color: #55f8c9;
+}
+#signup:pressed {
+    -fx-background-color: #4bcda3;
+}

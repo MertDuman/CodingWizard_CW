@@ -1,0 +1,71 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Pos?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane fx:controller="codingWizard.profilestagepackage.ProfileSController"
+            xmlns:fx="http://javafx.com/fxml" fx:id="mainBorderPane" id="mainBorderPane"
+            stylesheets="@profileStageStyles.css">
+
+    <center>
+        <HBox spacing="10">
+            <BorderPane.margin>
+                <Insets left="20" top="20" bottom="20" right="20"/>
+            </BorderPane.margin>
+
+            <VBox spacing="10" prefWidth="550">
+                <HBox spacing="20">
+                    <ImageView id="imageView">
+                        <Image url="/icons/profilePageIcon.png" requestedWidth="150" requestedHeight="300" preserveRatio="true" smooth="true"/>
+                    </ImageView>
+                    <VBox spacing="34">
+                        <Label fx:id="usernameLabel" text="Username: "/>
+                        <Label fx:id="competenceStageLabel" text="Competence stage: "/>
+                        <HBox>
+                            <Label text="Progress: "/>
+                            <ProgressBar fx:id="progressBar" prefWidth="100" progress="0.0"/>
+                        </HBox>
+                    </VBox>
+                </HBox>
+
+                <VBox spacing="15">
+                    <VBox.margin>
+                        <Insets top="20"/>
+                    </VBox.margin>
+                    <Label fx:id="pointsLabel" text="Points: "/>
+                    <Label fx:id="rankingLabel" text="Weekly ranking: "/>
+                    <Label fx:id="joinLabel" text="Join Date: "/>
+                </VBox>
+            </VBox>
+
+            <TableView fx:id="tableView" id="tableView" >
+                <columns>
+                    <TableColumn minWidth="50" text="No">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="rank"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="180" text="Username">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="name"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="100" text="Points">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="points"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </HBox>
+    </center>
+
+</BorderPane>

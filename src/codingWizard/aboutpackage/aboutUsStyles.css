@@ -1,0 +1,41 @@
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-background-image: url("/icons/matrix.png");
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: white;
+    -fx-background-image: url("/icons/matrix.png");
+
+}
+
+.dialog-pane *.header-panel *.label {
+    -fx-font-size: 30px;
+    -fx-font-family: "Calibri italic", serif;
+    -fx-text-fill: white;
+    -fx-font-style: italic;
+}
+
+.dialog-pane .label {
+    -fx-font-size: 23px;
+    -fx-font-family: "Calibri", serif;
+    -fx-text-fill: white;
+}
+
+#gridPane {
+    -fx-font-family: "Calibri", serif;
+    -fx-font-size: 25px;
+    -fx-background-color: aliceblue;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+
+    -fx-background-image: url("/icons/A.png");
+}
+
+#creators {
+    -fx-font-weight: bold;
+}
+
+#codingWizard {
+    -fx-font-weight: bold;
+}

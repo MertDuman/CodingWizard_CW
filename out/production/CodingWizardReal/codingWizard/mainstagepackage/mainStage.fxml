@@ -1,0 +1,62 @@
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<GridPane fx:controller="codingWizard.mainstagepackage.MainSController" fx:id="gridPane" id="gridPane"
+          xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER"
+          hgap="10" vgap="20" stylesheets="@mainStageStyles.css" gridLinesVisible="false">
+
+    <Label fx:id="codingWizardLabel" id="codingWizard" text="CodingWizard" GridPane.halignment="CENTER">
+        <GridPane.margin>
+            <Insets top="40" bottom="20"/>
+        </GridPane.margin>
+    </Label>
+
+    <TextField fx:id="usernameField" id="username" GridPane.rowIndex="1" GridPane.columnIndex="0"
+               GridPane.halignment="CENTER" promptText="Username"/>
+    <PasswordField fx:id="passwordField" id="password" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                   GridPane.halignment="CENTER" promptText="Password"/>
+    <Label fx:id="invalidLoginLabel" id="invalidLogin" GridPane.rowIndex="1" GridPane.columnIndex="0" translateX="+320"/>
+
+    <Line fx:id="fieldLine" endY="120" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.columnIndex="0" stroke="white" strokeWidth="5"
+        strokeLineCap="ROUND" scaleY="0">
+        <GridPane.margin>
+            <Insets left="30"/>
+        </GridPane.margin>
+    </Line>
+    <ImageView fx:id="personalPageIcon" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="RIGHT" scaleX="0">
+        <GridPane.margin>
+            <Insets right="45"/>
+        </GridPane.margin>
+        <Image url="/icons/personalPageIcon.png" requestedWidth="40" requestedHeight="40" preserveRatio="true" smooth="true"/>
+    </ImageView>
+    <ImageView fx:id="starIcon" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.halignment="RIGHT" scaleX="0">
+        <GridPane.margin>
+            <Insets right="45"/>
+        </GridPane.margin>
+        <Image url="/icons/starIcon.png" requestedWidth="40" requestedHeight="40" preserveRatio="true" smooth="true"/>
+    </ImageView>
+
+    <HBox GridPane.rowIndex="3" GridPane.columnIndex="0" spacing="20" alignment="CENTER">
+        <GridPane.margin>
+            <Insets top="30" bottom="10"/>
+        </GridPane.margin>
+        <Button fx:id="loginButton" id="login" text="Log In" onAction="#handleLogIn"/>
+        <Button fx:id="signupButton" id="signup" text="Sign Up"
+                onAction="#openSignUpPage"/>
+    </HBox>
+
+    <Button fx:id="helpButton" id="helpButton" text="help" GridPane.rowIndex="4" GridPane.halignment="RIGHT" onAction="#showHelpOptions"/>
+    <Button fx:id="aboutButton" text="about" GridPane.rowIndex="4" GridPane.halignment="RIGHT" onAction="#openAboutUsPage">
+        <GridPane.margin>
+            <Insets right="50"/>
+        </GridPane.margin>
+    </Button>
+    <Line fx:id="helpLine" endY="150" GridPane.rowIndex="0" GridPane.rowSpan="5" GridPane.columnIndex="0" stroke="white" strokeWidth="4"
+          strokeLineCap="ROUND" translateX="350" translateY="300"/>
+    <Label fx:id="helpLabel" GridPane.rowIndex="0" GridPane.rowSpan="5" GridPane.columnIndex="0"
+           translateX="155" translateY="100" prefHeight="150" style="-fx-background-color: rgba(255,255,255,1);
+           -fx-background-radius: 5px; -fx-font-family: Arial; -fx-font-size: 17px; -fx-font-weight: bold"/>
+</GridPane>

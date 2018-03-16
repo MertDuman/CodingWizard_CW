@@ -1,0 +1,46 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<GridPane fx:controller="codingWizard.aboutpackage.AboutUsSController" fx:id="gridPane"
+          xmlns:fx="http://javafx.com/fxml" alignment="TOP_LEFT" hgap="10" vgap="5"
+          gridLinesVisible="false" stylesheets="@aboutUsStyles.css" id="gridPane">
+
+    <padding>
+        <Insets left="10" top="20"/>
+    </padding>
+    <Text text="CodingWizard" GridPane.rowIndex="0" GridPane.columnIndex="0" id="codingWizard">
+        <GridPane.margin>
+            <Insets bottom="10"/>
+        </GridPane.margin>
+    </Text>
+    <Text text="Created on 12.05.2017" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Text text="Free to use desktop application" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Text text="Questions are retrieved from codeacademy.com" GridPane.rowIndex="2" GridPane.columnIndex="0" translateY="28"/>
+    <Text text="This app will be updated as frequently as possible" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Text text="If you have any questions, feedback or suggestions," GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <Text text="please contact us: cs_project17_bilkent@gmail.com" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+
+    <Text text="Creators:" GridPane.rowIndex="6" GridPane.columnIndex="0" id="creators">
+        <GridPane.margin>
+            <Insets top="25"/>
+        </GridPane.margin>
+    </Text>
+
+    <VBox GridPane.rowIndex="7" id="vBox">
+        <padding>
+            <Insets left="20" top="5"/>
+        </padding>
+        <Text text="Mert Duman (Bilkent CS Department)"/>
+        <Text text="İlke Adalıoğlu (Bilkent EE Department)"/>
+        <Text text="Talha Bozkuş (Bilkent EE Department)"/>
+        <Text text="Oğuz Liv (Bilkent CS Department)"/>
+        <Text text="Ömer Olkun (Bilkent CS Department)"/>
+    </VBox>
+
+    <ImageView GridPane.columnIndex="0" GridPane.rowSpan="3" GridPane.halignment="RIGHT">
+        <Image url="/icons/anotherAboutIcon1.png" requestedWidth="150" requestedHeight="150" preserveRatio="true" smooth="true"/>
+    </ImageView>
+</GridPane>

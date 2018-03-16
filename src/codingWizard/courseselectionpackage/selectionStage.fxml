@@ -1,0 +1,29 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:controller="codingWizard.courseselectionpackage.SelectionSController"
+            xmlns:fx="http://javafx.com/fxml" fx:id="mainBorderPane" id="borderPane" stylesheets="@selectionStageStyles.css">
+
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <HBox spacing="40" alignment="CENTER">
+                <Button fx:id="learnButton" id="learnButton" text="Start Learning" prefHeight="150" prefWidth="250" onAction="#openLearningStage"/>
+                <Button fx:id="examButton" id="examButton" text="Take an Exam" prefHeight="150" prefWidth="250" onAction="#openExamStage"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox translateX="+7" translateY="-7" alignment="CENTER_LEFT">
+            <Button fx:id="logoutButton" prefWidth="50" prefHeight="50" onAction="#handleLogout"/>
+            <Label id="logoutLabel" text="Log Out"/>
+        </HBox>
+    </bottom>
+</BorderPane>

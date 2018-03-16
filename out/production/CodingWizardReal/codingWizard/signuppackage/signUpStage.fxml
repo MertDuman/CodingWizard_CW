@@ -1,0 +1,69 @@
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<GridPane fx:controller="codingWizard.signuppackage.SignUpSController" fx:id="mainGridPane" id="gridPane"
+          xmlns:fx="http://javafx.com/fxml" stylesheets="@signUpStyles.css"
+          alignment="TOP_CENTER" hgap="10" vgap="25">
+
+    <!--sign up and start coding-->
+    <Label fx:id="signUpLabel" id="signUpLabel" text="Sign Up and Start Coding" GridPane.halignment="CENTER">
+        <GridPane.margin>
+            <Insets top="30" bottom="10"/>
+        </GridPane.margin>
+    </Label>
+    <TextField fx:id="usernameField" id="username" GridPane.rowIndex="1" GridPane.columnIndex="0"
+               GridPane.halignment="CENTER" promptText="Username"/>
+    <Label fx:id="duplicateUserLabel" id="errorLabel" GridPane.rowIndex="1" GridPane.columnIndex="0" translateX="+320"/>
+    <PasswordField fx:id="passwordField1" id="password" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                   GridPane.halignment="CENTER" promptText="Password"/>
+    <PasswordField fx:id="passwordField2" id="password" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                   GridPane.halignment="CENTER" promptText="Re-Password"/>
+    <Label fx:id="unmatchingPasswordLabel" id="errorLabel" GridPane.rowIndex="2" GridPane.columnIndex="0" translateX="+320"/>
+    <Line fx:id="fieldLine" endY="200" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.columnIndex="0" stroke="white" strokeWidth="5"
+          strokeLineCap="ROUND" scaleY="0">
+        <GridPane.margin>
+            <Insets left="30"/>
+        </GridPane.margin>
+    </Line>
+
+    <ImageView fx:id="personalPageIcon" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.halignment="RIGHT" scaleX="0">
+        <GridPane.margin>
+            <Insets right="43"/>
+        </GridPane.margin>
+        <Image url="/icons/personalPageIcon.png" requestedWidth="40" requestedHeight="40" preserveRatio="true" smooth="true"/>
+    </ImageView>
+
+    <ImageView fx:id="starIcon1" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.halignment="RIGHT" scaleX="0">
+        <GridPane.margin>
+            <Insets right="43"/>
+        </GridPane.margin>
+        <Image url="/icons/starIcon.png" requestedWidth="40" requestedHeight="40" preserveRatio="true" smooth="true"/>
+    </ImageView>
+
+    <ImageView fx:id="starIcon2" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="RIGHT" scaleX="0">
+        <GridPane.margin>
+            <Insets right="43"/>
+        </GridPane.margin>
+        <Image url="/icons/starIcon.png" requestedWidth="40" requestedHeight="40" preserveRatio="true" smooth="true"/>
+    </ImageView>
+
+    <Button fx:id="signupButton" id="signup" text="Sign Up" GridPane.halignment="CENTER"
+            GridPane.rowIndex="4" GridPane.columnIndex="0" onAction="#handleSignUp">
+        <GridPane.margin>
+            <Insets top="10"/>
+        </GridPane.margin>
+    </Button>
+
+    <HBox GridPane.rowIndex="5" alignment="BOTTOM_RIGHT">
+        <Button fx:id="homeButton" text="home" onAction="#returnToMainPage"/>
+        <Button fx:id="aboutButton" text="about" onAction="#openAboutUsPage"/>
+        <Button fx:id="helpButton" id="helpButton" text="help" onAction="#showHelpOptions"/>
+    </HBox>
+    <Line fx:id="helpLine" endY="120" GridPane.rowIndex="0" GridPane.rowSpan="5" GridPane.columnIndex="0" stroke="white" strokeWidth="4"
+          strokeLineCap="ROUND" translateX="340" translateY="300"/>
+    <Label fx:id="helpLabel" GridPane.rowIndex="0" GridPane.rowSpan="5" GridPane.columnIndex="0"
+           translateX="125" translateY="140" prefHeight="120" style="-fx-background-color: rgba(255,255,255,1);
+           -fx-background-radius: 5px; -fx-font-family: Arial, serif; -fx-font-size: 17px; -fx-font-weight: bold"/>
+</GridPane>

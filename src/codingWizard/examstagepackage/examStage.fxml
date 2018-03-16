@@ -1,0 +1,78 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<VBox fx:controller="codingWizard.examstagepackage.ExamSController"
+      xmlns:fx="http://javafx.com/fxml" spacing="5" id="VBox" stylesheets="@examStageStyles.css">
+
+    <Label text="Each question is worth 5 points."/>
+    <fx:define>
+        <ToggleGroup fx:id="question1"/>
+    </fx:define>
+    <Label fx:id="q1" text="Q1)  Which one of the following is the default value of an instance variable?"/>
+    <RadioButton text="null" toggleGroup="$question1"/>
+    <RadioButton text="0" toggleGroup="$question1"/>
+    <RadioButton fx:id="cor1" text="Depends on the type of the variable" toggleGroup="$question1"/>
+    <RadioButton text="Not assigned" toggleGroup="$question1"/>
+
+    <fx:define>
+        <ToggleGroup fx:id="question2"/>
+    </fx:define>
+    <Label fx:id="q2" text="Q2)  What is the maximum value of an integer?"/>
+    <RadioButton fx:id="cor2" text="2^31" toggleGroup="$question2"/>
+    <RadioButton text="16.334" toggleGroup="$question2"/>
+    <RadioButton text="Doesn't have a max value" toggleGroup="$question2"/>
+    <RadioButton text="2^63" toggleGroup="$question2"/>
+
+    <fx:define>
+        <ToggleGroup fx:id="question3"/>
+    </fx:define>
+    <Label fx:id="q3" text="Q3)  What one is the correct way of instantiating a String?"/>
+    <RadioButton text="String str = Hello" toggleGroup="$question3"/>
+    <RadioButton text="String str = 'Hello'" toggleGroup="$question3"/>
+    <RadioButton fx:id="cor3" text="String str = &quot;Hello&quot;" toggleGroup="$question3"/>
+    <RadioButton text="String str;" toggleGroup="$question3"/>
+
+    <fx:define>
+        <ToggleGroup fx:id="question4"/>
+    </fx:define>
+    <Label fx:id="q4_1" text="Q4)  for ( int i = 0; i > 5; i--) { System.out.println(&quot;Hello&quot;); }"/>
+    <Label fx:id="q4_2" text="       How many print statements will this print?"/>
+    <RadioButton text="5" toggleGroup="$question4"/>
+    <RadioButton text="6" toggleGroup="$question4"/>
+    <RadioButton fx:id="cor4" text="Infinitely (Until it crashes)" toggleGroup="$question4"/>
+    <RadioButton text="None" toggleGroup="$question4"/>
+
+    <fx:define>
+        <ToggleGroup fx:id="question5"/>
+    </fx:define>
+    <Label fx:id="q5_1" text="Q5)  int x = 0"/>
+    <Label fx:id="q5_2" text="       int count = 0"/>
+    <Label fx:id="q5_3" text="       while(x >= 0) { x++; if ( x > 10) { x = -1; count++; }}"/>
+    <Label fx:id="q5_4" text="       What is count after exiting the while loop?"/>
+    <RadioButton text="10" toggleGroup="$question5"/>
+    <RadioButton text="11" toggleGroup="$question5"/>
+    <RadioButton text="2" toggleGroup="$question5"/>
+    <RadioButton fx:id="cor5" text="1" toggleGroup="$question5"/>
+
+    <Label fx:id="resultLabel" text="Your points."/>
+
+    <HBox>
+        <Button fx:id="submitButton" text="Submit" onAction="#handleSubmit">
+            <HBox.margin>
+                <Insets left="300"/>
+            </HBox.margin>
+        </Button>
+        <Button fx:id="returnButton" translateY="-20" onAction="#returnToSelectionStage">
+            <HBox.margin>
+                <Insets left="200"/>
+            </HBox.margin>
+        </Button>
+        <Label text="Return" translateY="-5" translateX="+35"/>
+    </HBox>
+
+
+
+
+</VBox>

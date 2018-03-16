@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CodingWizardReal:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CodingWizardReal_jar</output-path>
+    <root id="archive" name="CodingWizardReal.jar">
+      <element id="module-output" name="CodingWizardReal" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/sqlite-jdbc-3.16.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/bsh-2.0b4.jar" path-in-jar="/" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/icons" />
+    </root>
+  </artifact>
+</component>

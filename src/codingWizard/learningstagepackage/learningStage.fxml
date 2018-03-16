@@ -1,0 +1,153 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:controller="codingWizard.learningstagepackage.LearningSController"
+            xmlns:fx="http://javafx.com/fxml" stylesheets="@learningStageStyles.css"
+            fx:id="mainBorderPane" id="mainBorderPane">
+
+    <top>
+        <MenuBar>
+            <Menu text="Options">
+                <MenuItem text="To Selection Page" onAction="#returnToSelectionStage"/>
+                <MenuItem text="Log out" onAction="#handleLogout"/>
+                <MenuItem text="Exit" onAction="#handleExit"/>
+            </Menu>
+
+
+            <Menu text="Sections">
+                <MenuItem fx:id="introL" text="Introduction to Java"/>
+
+                <Menu text="Primitive Data Types">
+                    <MenuItem fx:id="int_doubleL" text="int/double"/>
+                    <MenuItem fx:id="booleanL" text="boolean"/>
+                    <MenuItem fx:id="charL" text="char"/>
+                    <MenuItem fx:id="variablesL" text="variables"/>
+                    <MenuItem fx:id="whitespaceL" text="white space"/>
+                    <MenuItem fx:id="stringL" text="String"/>
+                </Menu>
+
+
+                <Menu text="If Statements">
+                    <MenuItem fx:id="ifstatementL" text="If Statement"/>
+                    <MenuItem fx:id="elsestatementL" text="Else Statement"/>
+                    <MenuItem fx:id="else_ifL" text="Else If"/>
+                </Menu>
+
+                <Menu text="Loops">
+                    <MenuItem fx:id="forloopL" text="For Loops"/>
+                    <MenuItem fx:id="whileloopL" text="While Loops"/>
+                    <MenuItem fx:id="do_whileloopL" text="Do-While Loops"/>
+                </Menu>
+
+                <MenuItem fx:id="methodsL" text="Methods"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <left>
+        <Accordion fx:id="accordion">
+            <panes>
+                <TitledPane fx:id="lectureTP" id="lectureTP" text="Learn" prefWidth="550">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/icons/bookIcon.png" smooth="true" requestedHeight="30" requestedWidth="30"
+                                   preserveRatio="true"/>
+                        </ImageView>
+                    </graphic>
+                    <TextArea fx:id="lectureArea" id="lectureArea" wrapText="true" prefHeight="1200"/>
+                </TitledPane>
+
+                <TitledPane fx:id="assignmentTP" id="assignmentTP" text="Assignment" prefWidth="550">
+                    <graphic>
+                        <ImageView>
+                            <Image url="/icons/assignmentIcon.png" smooth="true" requestedHeight="30" requestedWidth="30"
+                                   preserveRatio="true"/>
+                        </ImageView>
+                    </graphic>
+                    <TextArea fx:id="assignmentArea" id="lectureArea" wrapText="true" prefHeight="1200"/>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </left>
+
+    <center>
+        <StackPane>
+            <TextArea fx:id="codingArea" id="codingArea" wrapText="true" minWidth="800"/>
+
+            <ColorPicker fx:id="colorPickerCA" id="colorPicker" StackPane.alignment="TOP_RIGHT" prefWidth="34">
+                <tooltip>
+                    <Tooltip text="Change the color of the coding area."/>
+                </tooltip>
+            </ColorPicker>
+
+            <ColorPicker fx:id="colorPickerTF" id="colorPicker" translateX="-34" StackPane.alignment="TOP_RIGHT" prefWidth="34">
+                <tooltip>
+                    <Tooltip text="Change the color of the font."/>
+                </tooltip>
+            </ColorPicker>
+
+            <ToggleButton fx:id="resizeToggleButton" id="resizeButton" StackPane.alignment="TOP_RIGHT" translateX="-68" minWidth="0" maxWidth="33" onAction="#handleResize">
+                <graphic>
+                    <ImageView>
+                        <Image url="/icons/resizeIcon.png" requestedWidth="21" requestedHeight="21" smooth="true"
+                               preserveRatio="true"/>
+                    </ImageView>
+                </graphic>
+            </ToggleButton>
+
+            <Button fx:id="compileButton" id="compileButton" text="Compile and Run" StackPane.alignment="BOTTOM_RIGHT" onAction="#handleCompile"/>
+        </StackPane>
+    </center>
+
+    <right>
+        <VBox>
+            <TextArea fx:id="consoleArea" id="consoleArea" maxWidth="500" prefHeight="830"/>
+
+            <VBox spacing="10" id="bottomLeftVBox">
+                <HBox spacing="50" id="NewsBox_ReportBug_HBox" alignment="CENTER">
+                    <VBox.margin>
+                        <Insets top="10"/>
+                    </VBox.margin>
+                    <Button fx:id="newsBoxButton" text="News Box" prefHeight="35" onAction="#openNewsBox">
+                        <graphic>
+                            <ImageView>
+                                <Image url="/icons/newsIcon.png" requestedWidth="30" requestedHeight="30" smooth="true"
+                                       preserveRatio="true"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="reportABugButton" text="Report a Bug" prefHeight="35" onAction="#sendMail">
+                        <graphic>
+                            <ImageView>
+                                <Image url="/icons/bugIcon.png" requestedWidth="30" requestedHeight="30" smooth="true"
+                                       preserveRatio="true"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+
+                <HBox spacing="60" id="PSNButtonsHBox" alignment="CENTER">
+                    <Button fx:id="profileButton" prefHeight="60" prefWidth="60" onAction="#openProfilePage">
+                        <HBox.margin>
+                            <Insets top="5"/>
+                        </HBox.margin>
+                    </Button>
+                    <Button fx:id="skipButton" prefHeight="60" prefWidth="60" onAction="#handleSkip"/>
+                    <Button fx:id="nextButton" prefHeight="60" prefWidth="60" onAction="#handleNextButtonClick"/>
+                </HBox>
+
+                <HBox spacing="80" id="PSNLabelsHBox" alignment="CENTER"  translateX="-5" translateY="-10">
+                    <Label text="Profile"/>
+                    <Label text="Skip"/>
+                    <Label text="Next"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </right>
+
+</BorderPane>
